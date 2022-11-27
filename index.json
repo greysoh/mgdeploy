@@ -15,6 +15,10 @@
     {
       "name": "CopyFiles",
       "path": "src/30_copyFiles.js"
+    },
+    {
+      "name": "Cleanup",
+      "path": "src/40_cleanup.js"
     }
   ]
 }
