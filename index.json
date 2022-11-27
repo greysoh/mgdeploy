@@ -7,6 +7,10 @@
     {
       "name": "InstallPackages",
       "path": "src/10_pkgInstallation.js"
+    },
+    {
+      "name": "ConfigureDesktop",
+      "path": "src/20_configureDesktop.js"
     }
   ]
 }
