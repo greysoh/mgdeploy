@@ -11,6 +11,10 @@
     {
       "name": "ConfigureDesktop",
       "path": "src/20_configureDesktop.js"
+    },
+    {
+      "name": "CopyFiles",
+      "path": "src/30_copyFiles.js"
     }
   ]
 }

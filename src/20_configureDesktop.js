@@ -12,9 +12,9 @@ ${backupData.desktopInfo.accentBackupPath ? `reg import "${backupPath + backupDa
 ${backupData.desktopInfo.colorsBackupPath ? `reg import "${backupPath + backupData.desktopInfo.colorsBackupPath}"`: "rem ."}
 `);
 
-//await WindowsAPI.runBatch(batchCmd);
+await WindowsAPI.runBatch(batchCmd);
 Console.info("Waiting for registry to finish deploying...");
-//await Deployinator.sleep(4000);
+await Deployinator.sleep(4000);
 
 if (backupData.desktopInfo.wallpaperPath) {
   await Deno.copyFile(backupPath + backupData.desktopInfo.wallpaperPath, homeDir + backupData.desktopInfo.wallpaperPath);

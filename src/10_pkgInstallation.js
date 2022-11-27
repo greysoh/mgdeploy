@@ -1,8 +1,7 @@
 const backupPath = Deno.env.get("TEMP") + "\\extBackupData\\";
 const backupData = JSON.parse(await Deno.readTextFile(backupPath + "backup.json"));
 
-// Disabled for development
-//await WindowsAPI.installWingetCMD(backupData.apps.winget.join(" "));
+await WindowsAPI.installWingetCMD(backupData.apps.winget.join(" "));
 
 if (backupData.apps.missing.length > 0) {
   for (const i of backupData.apps.missing) {
