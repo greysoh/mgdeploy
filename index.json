@@ -1,0 +1,8 @@
+{
+  "path": [
+    {
+      "name": "ExtractBackup",
+      "path": "src/00_extract.js"
+    }
+  ]
+}
