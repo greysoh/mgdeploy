@@ -3,6 +3,10 @@
     {
       "name": "ExtractBackup",
       "path": "src/00_extract.js"
+    },
+    {
+      "name": "InstallPackages",
+      "path": "src/10_pkgInstallation.js"
     }
   ]
 }

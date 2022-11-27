@@ -23,3 +23,10 @@ tar -xf backup.zip
 `);
 
 await Deno.remove(backupPath + "backup.zip");
+
+const backupData = JSON.parse(await Deno.readTextFile(backupPath + "backup.json"));
+
+if (backupData.libkStandardVer != 0) {
+  Console.error("Unsupported backup version. Aborting.");
+  Deno.exit(1);
+}
