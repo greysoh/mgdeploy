@@ -17,13 +17,7 @@ try {
   throw "Your backup was not found";
 }
 
-await WindowsAPI.runBatch(`@echo off
-cd "${backupPath}"
-tar -xf backup.zip
-`);
-
-await Deno.remove(backupPath + "backup.zip");
-
+await WindowsAPI.executeShell(["powershell.exe", "/c", "Expand-Archive", "-Force", backupPath + "backup.zip", backupPath]);
 const backupData = JSON.parse(await Deno.readTextFile(backupPath + "backup.json"));
 
 if (backupData.libkStandardVer != 0) {
