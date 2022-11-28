@@ -21,9 +21,9 @@ if (backupData.desktopInfo.wallpaperPath) {
   await WindowsAPI.runReg([
     { 
       key: "HKEY_CURRENT_USER\\Control Panel\\Desktop",
-      value: "WallPaper",
-      type: "REG_SZ",
-      value: homeDir + backupData.desktopInfo.wallpaperPath 
+      path: "WallPaper",
+      value: homeDir + backupData.desktopInfo.wallpaperPath,
+      type: "REG_SZ" 
     }
   ])
 }
