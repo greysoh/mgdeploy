@@ -1,4 +1,4 @@
-const backupData = JSON.parse(await Deno.readTextFile(backupPath + "backup.json"));
-await Deno.remove(backupPath, { recursive: true });
+const backupPath = Deno.env.get("TEMP") + "\\extBackupData\\";
 
+await Deno.remove(backupPath, { recursive: true });
 await WindowsAPI.runBatch("shutdown /r /t 60");
